@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.1.5
+script:
+- git submodule update --init
+- BUNDLE_GEMFILE=cf.Gemfile bundle install
+- BUNDLE_GEMFILE=cf.Gemfile bundle exec buildpack-packager cached
+- mv ./*.zip nodejs-buildpack-offline.zip
+deploy:
+  provider: releases
+  api_key:
+    secure: MB4OTQ3SY1/NwGhr66adt06HlIhZx227Fr8lY/1sP482M8SjXMlVdGPwAErmFGjecNpZgjXD55KdG6S0XbrGKWAwQst+wjjpfqKFR+lHa5hMnXnWiKucPR8FtN0p+rad4Y0FpMVMQl/IXMOftgUxFeaPnM11xk7et6AyyuZ5/Lo=
+  file: nodejs-buildpack-offline.zip
+  on:
+    tags: true
+    all_branches: true

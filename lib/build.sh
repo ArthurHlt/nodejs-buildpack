@@ -165,8 +165,7 @@ build_dependencies() {
     info "Skipping dependencies (no source for node_modules)"
 
   elif [ "$modules_source" == "prebuilt" ]; then
-    info "Rebuilding any native modules for this architecture"
-    npm rebuild 2>&1 | indent
+    info "Do nothing"
 
   else
     info "Installing node modules"
