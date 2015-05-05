@@ -164,8 +164,12 @@ build_dependencies() {
   if [ "$modules_source" == "" ]; then
     info "Skipping dependencies (no source for node_modules)"
 
-  elif [ "$modules_source" == "prebuilt" ]; then
-    info "Do nothing"
+  elif [ "$modules_source" == "prebuilt" && ${NO_REBUILD:="foo"} == "foo" ]; then
+    info "Rebuilding any native modules for this architecture"
+    npm rebuild 2>&1 | indent
+
+  elif [ "$modules_source" == "prebuilt" && ${NO_REBUILD:="foo"} != "foo" ]; then
+    info "No rebuilding"
 
   else
     info "Installing node modules"
