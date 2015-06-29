@@ -1,3 +1,47 @@
+v1.3.5 Jun 24, 2015
+====================
+
+* Merge upstream changes from Heroku (sha: f1b195427424922274807151e0dd8d1948d03ebb):
+  * Improvements to app caching logic
+
+* Remove lucid-specific binaries from manifest.yml
+	(https://www.pivotaltracker.com/story/show/96135874)
+
+* Give helpful message on unsupported stacks
+  (https://www.pivotaltracker.com/story/show/96590188)
+
+v1.3.4 Jun 08, 2015
+====================
+
+* Add support for nodejs 0.12.4
+  (https://www.pivotaltracker.com/story/show/95004952)
+
+* Provide more explicit error message for missing options
+  (https://www.pivotaltracker.com/story/show/95473896)
+
+v1.3.3 May 22, 2015
+====================
+
+* Fix bugs regarding package.json and node_modules directory interaction
+  (https://www.pivotaltracker.com/story/show/94525966)
+  (https://www.pivotaltracker.com/story/show/94516870)
+
+v1.3.2 May 20, 2015
+====================
+
+* Merge upstream changes from Heroku up to SHA d8fbb5b05be58c863f0c67f4e0e394c83b0ab5a3
+  (https://www.pivotaltracker.com/story/show/93482010)
+
+v1.3.1 May 07, 2015
+====================
+
+* Add all Node.js versions to versions.json, resolving an issue for cached
+  buildpacks and old Node.js versions
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/93717296)
+* Bump buildpack-packager to support custom buildpack manifests.
+* Remove unsupported Node.js versions for for lucid64
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/93218340)
+
 v1.3.0 Apr 17, 2015
 ====================
 
