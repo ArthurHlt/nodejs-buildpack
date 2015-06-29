@@ -169,7 +169,7 @@ build_dependencies() {
     npm rebuild 2>&1 | indent
 
   elif [ "$modules_source" == "prebuilt" ] && [ "$norebuild" != "no" ]; then
-    info "No rebuilding"
+    info "No rebuild"
 
   else
     info "Installing node modules"
